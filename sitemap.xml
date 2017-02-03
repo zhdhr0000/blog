@@ -2,37 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://zhdhr0000.github.io/2017/02/03/hello-world/</loc>
+    <loc>http://zhdhr0000.github.io/categories/index.html</loc>
     
-    <lastmod>2017-02-03T06:26:10.885Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhdhr0000.github.io/tags/index.html</loc>
-    
-    <lastmod>2017-02-03T06:12:56.423Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://zhdhr0000.github.io/sitemap/index.html</loc>
-    
-    <lastmod>2017-02-03T06:06:46.942Z</lastmod>
+    <lastmod>2017-02-03T07:19:32.395Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://zhdhr0000.github.io/about/index.html</loc>
     
-    <lastmod>2017-02-03T06:06:39.024Z</lastmod>
+    <lastmod>2017-02-03T07:19:25.035Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://zhdhr0000.github.io/categories/index.html</loc>
+    <loc>http://zhdhr0000.github.io/tags/index.html</loc>
     
-    <lastmod>2017-02-03T06:01:56.710Z</lastmod>
+    <lastmod>2017-02-03T07:19:10.345Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://zhdhr0000.github.io/2017/02/03/hello-world/</loc>
+    
+    <lastmod>2017-02-03T06:26:10.885Z</lastmod>
     
   </url>
   
