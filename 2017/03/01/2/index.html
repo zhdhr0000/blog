@@ -84,16 +84,19 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.这是Hexo">
+<meta name="description" content="MVC及MVC架构在移动端存在的两个问题MVC就是传统的Model,View,Controller结构,据说曾在PC Web时代大放光彩,是一个很经典的应用架构,不再详细介绍啦.
+1.视图层难以做逻辑和业务,Controller过重但是在Android开发里,Model基本对应了应用的HttpService,Database,POJO等,但V和C的职能划分就出现了差距,View层的代表XML布局在">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://zhdhr0000.github.io/2017/02/03/hello-world/index.html">
+<meta property="og:title" content="知识梳理-MVP">
+<meta property="og:url" content="http://zhdhr0000.github.io/2017/03/01/2/index.html">
 <meta property="og:site_name" content="Just a blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.这是Hexo">
-<meta property="og:updated_time" content="2017-02-22T05:38:08.486Z">
+<meta property="og:description" content="MVC及MVC架构在移动端存在的两个问题MVC就是传统的Model,View,Controller结构,据说曾在PC Web时代大放光彩,是一个很经典的应用架构,不再详细介绍啦.
+1.视图层难以做逻辑和业务,Controller过重但是在Android开发里,Model基本对应了应用的HttpService,Database,POJO等,但V和C的职能划分就出现了差距,View层的代表XML布局在">
+<meta property="og:updated_time" content="2017-03-01T10:54:48.056Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.这是Hexo">
+<meta name="twitter:title" content="知识梳理-MVP">
+<meta name="twitter:description" content="MVC及MVC架构在移动端存在的两个问题MVC就是传统的Model,View,Controller结构,据说曾在PC Web时代大放光彩,是一个很经典的应用架构,不再详细介绍啦.
+1.视图层难以做逻辑和业务,Controller过重但是在Android开发里,Model基本对应了应用的HttpService,Database,POJO等,但V和C的职能划分就出现了差距,View层的代表XML布局在">
 
 
 
@@ -121,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://zhdhr0000.github.io/2017/02/03/hello-world/"/>
+  <link rel="canonical" href="http://zhdhr0000.github.io/2017/03/01/2/"/>
 
 
 
 
 
-  <title> Hello World | Just a blog </title>
+  <title> 知识梳理-MVP | Just a blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +276,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://zhdhr0000.github.io/blog/2017/02/03/hello-world/">
+  <link itemprop="mainEntityOfPage" href="http://zhdhr0000.github.io/blog/2017/03/01/2/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="Zhangyh">
@@ -297,7 +300,7 @@
             
             
               
-                Hello World
+                知识梳理-MVP
               
             
           </h2>
@@ -312,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-02-03T11:04:59+08:00">
-                2017-02-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-01T16:06:02+08:00">
+                2017-03-01
               </time>
             
 
@@ -331,8 +334,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog/2017/02/03/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/03/hello-world/" itemprop="commentCount"></span>
+                <a href="/blog/2017/03/01/2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/01/2/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -358,15 +361,28 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.这是Hexo的<hello world="">文,并不打算删掉.</hello></p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <h2 id="MVC及MVC架构在移动端存在的两个问题"><a href="#MVC及MVC架构在移动端存在的两个问题" class="headerlink" title="MVC及MVC架构在移动端存在的两个问题"></a>MVC及MVC架构在移动端存在的两个问题</h2><p>MVC就是传统的Model,View,Controller结构,据说曾在PC Web时代大放光彩,是一个很经典的应用架构,不再详细介绍啦.</p>
+<h3 id="1-视图层难以做逻辑和业务-Controller过重"><a href="#1-视图层难以做逻辑和业务-Controller过重" class="headerlink" title="1.视图层难以做逻辑和业务,Controller过重"></a>1.视图层难以做逻辑和业务,Controller过重</h3><p>但是在Android开发里,Model基本对应了应用的HttpService,Database,POJO等,但V和C的职能划分就出现了差距,View层的代表XML布局在Android里面太轻量,只定义了最基础的展示,而View的交互变化和原本Controller的职责合并在了一起,被放到了Activity/Fragment里面,于是就形成了一个View层和Model层比较弱,大量的代码都被放到了Controller层的情况.</p>
+<p>据了解,iOS也出现了类似的问题,Model层都差不多,StoryBoard/NIB/XIB文件代表了View层,其他大量的逻辑都被放入到了ViewController里面,并且据说还有人在继续用代码布局,那ViewController里面的东西就更多了</p>
+<p>MVC本身的结构也不适合高速发展变化的移动端,由于View直接向Model询问状态,响应更新等等,其实是将View和Model进行耦合了,不利于后续的复用和业务修改调整,而且MVC在移动端已经变成了Massive View Controller(出自对iOS的ViewController过重的吐槽)╮(╯_╰)╭,而过重的Controller又会导致代码维护和修改的难度进一步增加,架构优化势在必行.</p>
+<h3 id="2-复用与修改"><a href="#2-复用与修改" class="headerlink" title="2.复用与修改"></a>2.复用与修改</h3><p>由于MVC三个部分之间相互都可以沟通,实质上将M-V-C三部分耦合在了一起,很难单独的将某一部分进行复用,同时修改其中一个部分的时候需要注意另外两个部分是不是也需要同步进行修改,这无疑就给修改代码提高了难度.</p>
+<h2 id="MVP"><a href="#MVP" class="headerlink" title="MVP"></a>MVP</h2><p>MVP架构是使用了Presenter层代替了原本的Controller层,View只和Presenter通信,Model也只和Presenter通信,双方通过协议进行沟通和交流,协议一般是讲业务拆分成视图部分和数据部分,数据部分交给Presenter通知Model层,而数据改变后,Model不允许直接通知视图,而是通知Presenter由Presenter通知绑定的视图,通过这种方式实现了解耦</p>
+<p>MVP在Android中,由于XML体系能做的事情有限,所以往往将Activity/Fragment作为View层,Model层还是原本MVC中的Model层,而双方根据业务的需求,抽象定义出一个中间人Presenter的双向协议,一个方面是Presenter对视图所提供的业务接口,一个方面是Presenter对数据进行操作控制的业务行为接口,通过双向的协议定义出对应的Presenter类</p>
+<h2 id="MVC与MVP的异同"><a href="#MVC与MVP的异同" class="headerlink" title="MVC与MVP的异同"></a>MVC与MVP的异同</h2><p>MVC和MVP有不少相似的思想,又有一定的差异,以下是我个人的理解.</p>
+<p>MVC/P:</p>
+<ul>
+<li>Model : 数据及相关操作</li>
+<li>View : 视图展示和响应</li>
+<li>Controller/Presenter : 处理业务与程序本身的控制器</li>
+</ul>
+<p>首先是相同点MVC和MVP的结构其实都是将程序分成了这三部分,数据作为单独的一层,面向用户的视图作为单独的一层,其余作为一个处理各种事件,业务等行为的控制器,其实可以明显的看出MVC和MVP的思想是一脉相承的,MVP可以说是对于MVC思想的一个改进版架构.</p>
+<p>而MVC和MVP最大的,也是最核心的一个区别是对不同组成部分之间,它们的的沟通交流进行了解耦,无论具体细节是如何实现的,这一思想是最核心的,不会发生改变,Model和View之间禁止直接发生通信,层与层之间的交流依托于一个中间人Presenter,与此同时，Presenter决定了具体的视图变化如何影响数据,数据的改变会如何向视图反馈</p>
+<p>整体的业务流程变得异常清晰,当遇到了Bug/业务改变/视图修改发生了改变的时候,可以对现有功能做出最小的影响来完成Bugfix/业务改变/视图修改,MVP非常直截了当的解决了MVC中遇到的两个主要问题</p>
+<h3 id="1-Model和View都只允许与Presenter层交互"><a href="#1-Model和View都只允许与Presenter层交互" class="headerlink" title="1.Model和View都只允许与Presenter层交互"></a>1.Model和View都只允许与Presenter层交互</h3><p>Model和View的具体操作Presenter不再负责处理,Model和View分流了MVC中Controller的作用,代码相对更均衡的分布在三方(当然业务复杂之后Presenter代码量依然会变多,但比MVC结构的代码分布更合理)</p>
+<h3 id="2-复用与修改-1"><a href="#2-复用与修改-1" class="headerlink" title="2.复用与修改"></a>2.复用与修改</h3><p>由于Model和View都只与Presenter通信,数据修改,视图修改业务修改依赖于协议,除非协议本身发生了修改,在单独一方需要修改的时候(如View),只需要修改对应的View层实现即可,不需要修改Presenter和Model层,典型场景是业务逻辑和数据都不变的情况下,界面展示进行了大幅的优化改版,MVC除了需要改View层相关,还需要在Controller和Model的代码中找到与View相关的代码进行修改,而MVP直接仅修改View层实现代码,协议未发生修改的情况下不需要修改Presenter和Model.</p>
+<h2 id="Android-MVP"><a href="#Android-MVP" class="headerlink" title="Android MVP"></a>Android MVP</h2><h3 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h3><p>一般至少会包含HttpService和POJO,还会含有Database,SharedPreference,ImageCache等等相关部分,大体和原本MVC的结构相似或相同.</p>
+<h3 id="View"><a href="#View" class="headerlink" title="View"></a>View</h3><p>由于Android的XML只是布局描述,并非编程代码并不能承担起View层的作用,View层由Activity和Fragment来承担,一般在setContentView之后就创建出对应的Presenter,调用Presenter中的对接视图的方法,将自己传给Presenter,视图逻辑牵扯到数据变动时通知Presenter对应协议方法.本身也会实现对应的视图协议方法来响应Presenter的对视图的控制</p>
+<h3 id="Presenter"><a href="#Presenter" class="headerlink" title="Presenter"></a>Presenter</h3><p>TODO 未完待续</p>
 
       
     </div>
@@ -393,15 +409,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/blog/2017/02/20/1/" rel="next" title="Android 7.0 PopupWindow的一个展示Bug">
+                <i class="fa fa-chevron-left"></i> Android 7.0 PopupWindow的一个展示Bug
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/2017/02/20/1/" rel="prev" title="Android 7.0 PopupWindow的一个展示Bug">
-                Android 7.0 PopupWindow的一个展示Bug <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -416,10 +432,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2017/02/03/hello-world/"
-     data-title="Hello World"
+        <div class="ds-share flat" data-thread-key="2017/03/01/2/"
+     data-title="知识梳理-MVP"
      data-content=""
-     data-url="http://zhdhr0000.github.io/blog/2017/02/03/hello-world/">
+     data-url="http://zhdhr0000.github.io/blog/2017/03/01/2/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -449,8 +465,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/03/hello-world/"
-           data-title="Hello World" data-url="http://zhdhr0000.github.io/blog/2017/02/03/hello-world/">
+      <div class="ds-thread" data-thread-key="2017/03/01/2/"
+           data-title="知识梳理-MVP" data-url="http://zhdhr0000.github.io/blog/2017/03/01/2/">
       </div>
     
   </div>
@@ -577,7 +593,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC及MVC架构在移动端存在的两个问题"><span class="nav-number">1.</span> <span class="nav-text">MVC及MVC架构在移动端存在的两个问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-视图层难以做逻辑和业务-Controller过重"><span class="nav-number">1.1.</span> <span class="nav-text">1.视图层难以做逻辑和业务,Controller过重</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-复用与修改"><span class="nav-number">1.2.</span> <span class="nav-text">2.复用与修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVP"><span class="nav-number">2.</span> <span class="nav-text">MVP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC与MVP的异同"><span class="nav-number">3.</span> <span class="nav-text">MVC与MVP的异同</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Model和View都只允许与Presenter层交互"><span class="nav-number">3.1.</span> <span class="nav-text">1.Model和View都只允许与Presenter层交互</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-复用与修改-1"><span class="nav-number">3.2.</span> <span class="nav-text">2.复用与修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-MVP"><span class="nav-number">4.</span> <span class="nav-text">Android MVP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Model"><span class="nav-number">4.1.</span> <span class="nav-text">Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#View"><span class="nav-number">4.2.</span> <span class="nav-text">View</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Presenter"><span class="nav-number">4.3.</span> <span class="nav-text">Presenter</span></a></li></ol></li></ol></div>
             
 
           </div>
