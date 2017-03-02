@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[知识梳理-MVP]]></title>
-      <url>http://zhdhr0000.github.io/blog/2017/03/01/2/</url>
+      <url>http://zhdhr0000.github.io/blog/2017/02/27/2/</url>
       <content type="html"><![CDATA[<h2 id="MVC及MVC架构在移动端存在的两个问题"><a href="#MVC及MVC架构在移动端存在的两个问题" class="headerlink" title="MVC及MVC架构在移动端存在的两个问题"></a>MVC及MVC架构在移动端存在的两个问题</h2><p>MVC就是传统的Model,View,Controller结构,据说曾在PC Web时代大放光彩,是一个很经典的应用架构,不再详细介绍啦.</p>
 <h3 id="1-View-Controller过重"><a href="#1-View-Controller过重" class="headerlink" title="1.View/Controller过重"></a>1.View/Controller过重</h3><p>但是在Android开发里,Model基本对应了应用的HttpService,Database,POJO等,但View和Controller的职能划分就出现了差距,View层的代表XML布局在Android里面太轻量,只定义了最基础的展示,而View的交互变化和原本Controller的职责合并在了一起,被放到了Activity/Fragment里面,于是就形成了一个View层和Model层比较弱,大量的代码都被放到了Controller层(当然也可以认为是View层很厚,Model和Controller层很薄)的情况.View和Controller的界限划分不明确.</p>
 <p>据了解,iOS也有类似的问题,Model层都差不多,StoryBoard/NIB/XIB文件代表了View层,其他大量的逻辑都被放入到了ViewController里面,并且据说还有人在继续用代码布局,那ViewController里面的东西就更多了,同样也出现了View和Controller职责界限划分不明的问题.</p>
@@ -35,7 +35,7 @@
 <li>Model层协议,约定了Model层具体提供的数据值和格式,比如登录返回的用户信息,查询某个商品的数据等.</li>
 </ol>
 <p>如图所示:</p>
-<div align="center"><br><img src="/blog/2017/03/01/2/mvp.png" alt="mvp关系图-画图手绘"><br></div>
+<div align="center"><br><img src="/blog/2017/02/27/2/mvp.png" alt="mvp关系图-画图手绘"><br></div>
 
 <p>MVP三层之间不依赖实例沟通,通过抽象的协议进行,以此对具体实现进行了解耦,只要协议不发生变化,修改具体实现时就只会修改内部实现,代理思想的精髓.</p>
 <p>这是一个 <a href="https://github.com/zhdhr0000/Architecture" target="_blank" rel="external">栗子</a>,基于MVP架构.</p>
