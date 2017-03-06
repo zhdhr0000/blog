@@ -4,6 +4,22 @@
   
     
     <entry>
+      <title><![CDATA[Android 应用防崩溃技巧]]></title>
+      <url>http://zhdhr0000.github.io/blog/2017/03/03/3/</url>
+      <content type="html"><![CDATA[<h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>前一段时间由于同事的一个RecyclerView的错误使用方式,导致了线上的App有部分使用者出现了页面闪退的情况,RecyclerView的LinearLayout抛出了IndexOutOfBoundsException.具体细节就不提了,由于数据刷新时列表滚动调用onLayoutChilden时报出的.</p>
+<p>但是由于这件事情,萌生了一个想法,能不能前台页面报异常归报异常,但尽可能不要闪退.</p>
+<h2 id="构思"><a href="#构思" class="headerlink" title="构思"></a>构思</h2><p>用try catch包住所有的代码段肯定是可行的,但是这方法也太蠢了….于是开始在网上查找资料,发现在一个地方可以动动手脚做做文章,就是Looper.</p>
+<p>Android的系统运行机制里简化的来看,一个App程序可以认为是在一个进程中执行了了一段无限循环的Java代码,反复的在从消息队列里面取出消息并执行,也就是Looper,MessageQueue(MQ),Handler,消息队列我们动不了什么手脚,但是Looper和Handler就可以做做文章了</p>
+<p>Android系统中的那段在无限循环读取消息队列的代码,是在Looper.loop()方法中被调用的,而本身异常捕获可以try catch,而多线程的异常则通过Java Thread的setDefaultUncaughtExceptionHandler来捕获,思路就是酱紫了.</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>创建了一个类GuardianAngel,其实定义了3个静态成员变量,分别是标识位guarded,用来保存原本handler的sUncaughtExceptionHandler和用来处理捕获到的异常的sExceptionHandler.核心方法如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">public static void protect(ExceptionHandler exceptionHandler) &#123;</div><div class="line">    if (guarded) &#123;</div><div class="line">        return;</div><div class="line">    &#125;</div><div class="line">    if (exceptionHandler != null) &#123;</div><div class="line">        sExceptionHandler = exceptionHandler;</div><div class="line">    &#125;</div><div class="line">    sUncaughtExceptionHandler = Thread.getDefaultUncaughtExceptionHandler();</div><div class="line">    Thread.setDefaultUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() &#123;</div><div class="line">        @Override</div><div class="line">        public void uncaughtException(Thread t, Throwable e) &#123;</div><div class="line">            sExceptionHandler.onException(e);</div><div class="line">        &#125;</div><div class="line">    &#125;);</div><div class="line">    guarded = true;</div><div class="line">    while (guarded) &#123;</div><div class="line">        try &#123;</div><div class="line">            Looper.getMainLooper().loop();</div><div class="line">        &#125; catch (Throwable e) &#123;</div><div class="line">            sExceptionHandler.onException(e);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>非常简单粗暴,首先判断标志位以及判断传进来的Handler是不是空的(类里面有个默认的Log.e输出堆栈的实现),然后记录下原有的UncaughtExceptionHandler,放一个新的由我们自己的sExceptionHandler代理的Handler,然后将状态标志改变并写一个死循环,手动的调用MainLooper.loop()方法读取messagequeue;</p>
+<p>原本主线程的MainLooper执行到我们的这个方法里的时候会在while (guarded)里陷入死循环,但是由于我们手动调用着MainLooper.loop()方法,于是系统looper依然在按照原样子读消息队列,只是这次loop方法已经被我们try catch住了,Java异常都会被捕获不再导致闪退.</p>
+<p>想终止就调用方法将guarded重新置为false,并且将原本的DefaultExceptionHandler重新set回去就好了,代码就不给出了.</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[知识梳理-MVP]]></title>
       <url>http://zhdhr0000.github.io/blog/2017/02/27/2/</url>
       <content type="html"><![CDATA[<h2 id="MVC及MVC架构在移动端存在的两个问题"><a href="#MVC及MVC架构在移动端存在的两个问题" class="headerlink" title="MVC及MVC架构在移动端存在的两个问题"></a>MVC及MVC架构在移动端存在的两个问题</h2><p>MVC就是传统的Model,View,Controller结构,据说曾在PC Web时代大放光彩,是一个很经典的应用架构,不再详细介绍啦.</p>
